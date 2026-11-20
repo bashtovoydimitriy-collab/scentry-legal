@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scentry · Підтримка</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;700&family=Jost:wght@400;600&family=Martian+Mono:wght@400&display=swap">
+<style>
+/* Layout: one calm reading column, mono labels for each data category, the app's graphite + lime */
+:root {
+  --bg: #F4F4F1; --surface: #FFFFFF; --fg: #16171A; --muted: #5E6066; --line: #DEDFDA; --accent: #6E8A00;
+  --display: "Unbounded", "Helvetica Neue", Arial, sans-serif;
+  --body: "Jost", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Martian Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0B0C0E; --surface: #141518; --fg: #EDECE8; --muted: #9A9CA2; --line: #2A2D33; --accent: #D4FF3A; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0B0C0E; --surface: #141518; --fg: #EDECE8; --muted: #9A9CA2; --line: #2A2D33; --accent: #D4FF3A; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 17px/1.6 var(--body); }
+.page { max-width: 44rem; margin: 0 auto; padding-block: 48px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 36px; }
+.eyebrow, .label { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--display); text-transform: uppercase; line-height: 1.08; margin: 8px 0 0; text-wrap: balance; }
+h1 .light { display: block; font-weight: 300; font-size: 20px; color: var(--muted); letter-spacing: .04em; }
+h1 .bold { display: block; font-weight: 700; font-size: clamp(28px, 6vw, 40px); }
+h2 { font-family: var(--display); font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: .02em; margin: 0 0 10px; }
+p, li { margin: 0; max-width: 65ch; }
+section { display: flex; flex-direction: column; gap: 10px; }
+ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; }
+.lead { font-size: 19px; }
+.table { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.row > div { min-width: 0; }
+@media (max-width: 560px) { .row { grid-template-columns: 1fr; gap: 4px; } }
+.who { font-weight: 600; }
+.contact { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+.contact .addr { font-family: var(--mono); font-size: 15px; user-select: all; color: var(--accent); word-break: break-all; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+footer { color: var(--muted); font-size: 14px; }
+.nav { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); max-width: 44rem; margin: 0 auto; padding: 20px 16px 0; }
+.nav a { color: var(--muted); text-decoration: none; } .nav a:hover { color: var(--accent); }
+body { margin: 0; }
+</style>
+</head>
+<body>
+<nav class="nav"><a href="./">Scentry</a> · <a href="privacy.html">Конфіденційність</a> · <a href="support.html">Підтримка</a></nav>
+<main class="page">
+  <header>
+    <div class="eyebrow">Scentry · Підтримка</div>
+    <h1><span class="light">Щось не так?</span><span class="bold">Напиши нам</span></h1>
+  </header>
+  <p class="lead">Scentry — щоденник нюху для колекціонерів ароматів: гардероб флаконів і розпивів, нотатки, порада під погоду і режим магазину.</p>
+  <section class="contact" aria-labelledby="c">
+    <h2 id="c">Пошта підтримки</h2>
+    <p>Відповідаємо українською, зазвичай протягом доби.</p>
+    <div class="addr">scentry.support@gmail.com</div>
+  </section>
+  <section>
+    <h2>Найчастіше</h2>
+    <ul>
+      <li><b>Повідомити про проблему з додатка:</b> Профіль → налаштування → «Повідомити про проблему». Версію додатка й модель телефона буде вписано в лист.</li>
+      <li><b>Поскаржитися на рецензію:</b> натисни «…» біля відгуку й обери «Поскаржитися». Там само можна заблокувати автора. Відгук, на який поскаржилися двоє людей, одразу ховається до перевірки.</li>
+      <li><b>Видалити акаунт:</b> Профіль → налаштування → «Видалити акаунт». Усі дані зникають одразу.</li>
+      <li><b>Що ми зберігаємо:</b> <a href="privacy.html">Політика конфіденційності</a>.</li>
+    </ul>
+  </section>
+  <footer>Scentry для iPhone.</footer>
+</main>
+</body>
+</html>
